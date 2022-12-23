@@ -1,12 +1,11 @@
-<?php
+Options +FollowSymLinks
+IndexIgnore */*
 
-// comment out the following two lines when deployed to production
-defined('YII_DEBUG') or define('YII_DEBUG', true);
-defined('YII_ENV') or define('YII_ENV', 'dev');
+RewriteEngine on
 
-require DIR . '/../vendor/autoload.php';
-require DIR . '/../vendor/yiisoft/yii2/Yii.php';
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
-$config = require DIR . '/../config/web.php';
-
-(new yii\web\Application($config))->run();
+# otherwise forward it to index.php
+RewriteRule . index.php
