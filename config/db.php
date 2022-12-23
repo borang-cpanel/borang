@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=borang_pori',
-    'username' => 'root',
-    'password' => 'password',
+    'dsn' => 'mysql:host=localhost;dbname=pori_borang',
+    'username' => 'pori_borang1',
+    'password' => 'pori_borang1',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
